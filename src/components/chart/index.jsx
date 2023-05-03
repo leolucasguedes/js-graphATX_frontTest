@@ -45,20 +45,32 @@ function Chart() {
   useEffect(() => {
     if (selectedOption.value === "roupas") {
       setChart(data.data);
-    } else if (selectedOption2.value === "camisa") {
+    } else if (selectedOption.value === "calçados") {
       setChart(data.data2);
-    } else if (selectedOption2.value === "blusalonga") {
-      setChart(data.data);
-    } else if (selectedOption2.value === "regata") {
-      setChart(data.data2);
-    } else if (selectedOption3.value === "prada") {
-      setChart(data.data);
-    } else if (selectedOption3.value === "boss") {
-      setChart(data.data2);
-    } else if (selectedOption3.value === "fendi") {
+    } else if (selectedOption.value === "acessorios") {
       setChart(data.data3);
     }
-  }, [selectedOption, selectedOption2, selectedOption3]);
+  }, [selectedOption]);
+
+  useEffect(() => {
+    if (selectedOption2.value === "blusalonga") {
+      setChart(data.data4);
+    } else if (selectedOption2.value === "camisa") {
+      setChart(data.data5);
+    } else if (selectedOption2.value === "regata") {
+      setChart(data.data6);
+    }
+  }, [selectedOption2]);
+
+  useEffect(() => {
+    if (selectedOption3.value === "prada") {
+      setChart(data.data7);
+    } else if (selectedOption3.value === "boss") {
+      setChart(data.data8);
+    } else if (selectedOption3.value === "fendi") {
+      setChart(data.data9);
+    }
+  }, [selectedOption3]);
 
   return (
     <Main>
